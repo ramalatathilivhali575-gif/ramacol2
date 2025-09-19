@@ -460,7 +460,7 @@ body {
 }
 
 .form-input {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -512,3 +512,4 @@ body {
     padding: 20px;
     text-align: center;
 }
+
