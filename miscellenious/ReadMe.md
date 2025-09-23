@@ -15,6 +15,8 @@ v1.0.0 – Initial Release (2025-08-27)
     Improved mobile responsiveness
     Integrated Font Awesome icons
     Added responsive CSS styling
+    Added the screenshots for developer tools
+    
 
 AUTHOR:RAMALATA THILIVHALI MARRYJANE
 
