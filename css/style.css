@@ -36,6 +36,7 @@ nav a.active {
         margin: 10px 0; /* Add margin between stacked links */
         text-align: center; /* Center the text */
     }
+    
 }
 
 /* Reset some default styles */
@@ -138,7 +139,10 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
+@media(max-width: 768px) {
 
+
+}
 .section-title {
     font-size: 2rem;
     color: #3498db;
