@@ -570,3 +570,213 @@ body {
   .close:hover {
     color: #f00;
   }
+  /* Contact Section */
+#contact-form-section {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+#contact-form-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #222;
+}
+
+/* Form Styling */
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Message */
+#formMessage {
+    text-align: center;
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    #contact-form-section {
+        width: 90%;
+        padding: 20px 15px;
+    }
+
+    #contact-form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-input, .submit-btn {
+        font-size: 0.95rem;
+    }
+}
+/* General Styles */
+#main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Limit the image width */
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin: 20px 0;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .main-image {
+        width: 90%; /* Make image more flexible on smaller screens */
+        max-width: 100%; /* Ensure image fits within container */
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* Slightly smaller title for mobile */
+    }
+
+    .section-description {
+        font-size: 1rem; /* Adjust text size for mobile */
+    }
+
+    #main-content {
+        padding: 15px;
+    }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .main-image {
+        width: 80%; /* Adjust image size for tablets */
+    }
+
+    .section-title {
+        font-size: 1.9rem; /* Slightly smaller title for tablets */
+    }
+
+    .section-description {
+        font-size: 1.1rem; /* Adjust text size for tablets */
+    }
+}
+
+/* Large Screens (Desktop) */
+@media (min-width: 1200px) {
+    .main-image {
+        width: 70%; /* Keep image size consistent on larger screens */
+    }
+
+    .section-title {
+        font-size: 2.5rem; /* Larger title for large screens */
+    }
+
+    .section-description {
+        font-size: 1.3rem; /* Larger text for larger screens */
+    }
+}
+/* General Styles for Gallery */
+#gallery-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    gap: 15px; /* Space between images */
+    justify-items: center; /* Center images horizontally */
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Set a max-width for each image */
+    border-radius: 8px; /* Optional: rounded corners for images */
+    object-fit: cover; /* Ensures the image fits well within the container */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Stack the images vertically */
+    }
+
+    .gallery-item {
+        max-width: 100%; /* Full-width images on mobile */
+    }
+}
+
+/* Tablet Responsiveness */
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr; /* Two images per row on tablets */
+    }
+
+    .gallery-item {
+        max-width: 90%; /* Slightly smaller images for better spacing */
+    }
+}
+
+/* Large Screens (Desktop) */
+@media (min-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Three images per row on large screens */
+    }
+
+    .gallery-item {
+        max-width: 100%; /* Full-width images within the grid on large screens */
+    }
+}

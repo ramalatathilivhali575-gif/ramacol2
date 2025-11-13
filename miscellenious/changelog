@@ -1,0 +1,44 @@
+Changelog
+v1.0.0 – Initial Release (2025-08-27)
+
+    Added homepage (index.html)
+
+    Created, "About Us" and "Contact" pages
+
+    Added navigation bar and footer
+
+    
+
+v1.1.0 – Latest Update (2025-07-26)
+    Added css for decoration, layout, and typography
+
+    Improved mobile responsiveness
+
+    Integrated Font Awesome icons
+
+    Added responsive CSS styling
+
+    
+
+    v1.1.1 -Maintanance update (2025-09-18)
+    Documentation
+              Update Changelog.md and the ReadMe.md for clarity and corrected spelling errors.
+              Update the word and text size.
+    CSS Styling
+           improve mobile responsiveness across different devices.
+
+           
+
+    v.1.2.0 SE0 Features (2025-11-02)
+
+    pages
+        Introduced enquiry page with content
+    Files & Structure
+               Updating miscellanaous/changelog.md (project updates)
+               updating miscellanaous/ReadMe.Md (project documentation)
+               Updating css/style.css (main stylesheet)
+               Renaming pictures.
+    Styling
+       added supporting css for javascript
+    Javascript
+           introducing javascript on all pages

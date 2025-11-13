@@ -1,8 +1,3 @@
-                           
-
-
-                     CHANGELOG
-
  RAMACOL Reproductive Health Center Website
 
 This is the official website for RAMACOL Reproductive Health Center, featuring pages such as Home, About Us, Our Services, Contact Us, Gallery, and an Enquiry Form.  
@@ -61,8 +56,7 @@ project/
 ├── assets/
 │   └── (images and media files)
 │
-├── js/
-│   └── script.js (optional if not using internal JS)
+├changelog
 │
 └── README.md
 
