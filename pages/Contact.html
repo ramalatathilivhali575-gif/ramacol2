@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - RAMACOL</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4./css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -17,6 +17,7 @@
             <a href="Our service.html" class="nav-link">Our Services</a>
             <a href="Contact.html" class="nav-link active">Contact Us</a>
             <a href="Gallery.html" class="nav-link">Gallery</a>
+            <a href="enquiry.html" class="nav-link">enquiry</a>
         </nav>
     </header>
 
@@ -27,13 +28,12 @@
             <h2 id="contact-title">Get in Touch</h2>
             <p><strong>Phone:</strong> 0647049498</p>
             <p><strong>Email:</strong> <a href="mailto:awelanicollen@gmail.com" class="email-link">awelanicollen@gmail.com</a></p>
-           
         </section>
 
         <!-- Contact Form Section -->
-        <section id="contact-form">
+        <section id="contact-form-section">
             <h2>LET US KNOW YOU</h2>
-            <form id="contact-form">
+            <form id="contactForm">
                 <label for="FirstName" class="form-label">First Name</label>
                 <input name="FirstName" type="text" id="FirstName" class="form-input">
 
@@ -42,8 +42,10 @@
 
                 <label for="contact" class="form-label">Contact Number</label>
                 <input name="contact" type="text" id="contact" class="form-input">
-                 <td> <input type="submit" name="button" value="submit"></td>
+
+                <input type="submit" value="Submit" class="submit-btn">
             </form>
+            <p id="formMessage" style="color: green; font-weight: bold;"></p>
         </section>
 
         <!-- Location Section -->
@@ -71,7 +73,37 @@
 
     <!-- Footer Section -->
     <footer id="footer" class="footer">
-        <p>&copy;2025 RAMACOL Reproductive Health Center. All Rights Reserved</p>
+        <p>&copy;<span id="current year"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
     </footer>
+
+    <!-- ✅ Internal JavaScript Section -->
+    <script>
+    
+        //Get the current year and insert it to span
+        document.getElementById("current year").textContent = new Date().getFullYear();
+        
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Stop form from reloading page
+
+            const firstName = document.getElementById("FirstName").value.trim();
+            const lastName = document.getElementById("LastName").value.trim();
+            const contact = document.getElementById("contact").value.trim();
+            const message = document.getElementById("formMessage");
+
+            // Basic validation
+            if (firstName === "" || lastName === "" || contact === "") {
+                message.style.color = "red";
+                message.textContent = "⚠️ Please fill out all fields.";
+                return;
+            }
+
+            // Simulate form submission success
+            message.style.color = "green";
+            message.textContent = `✅ Thank you, ${firstName}! We’ll get in touch soon.`;
+
+            // Optional: Clear form fields after submission
+            document.getElementById("contactForm").reset();
+        });
+    </script>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Gallery - RAMACOL</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4./css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -17,6 +17,7 @@
             <a href="Our service.html" class="nav-link">Our Services</a>
             <a href="Contact.html" class="nav-link">Contact Us</a>
             <a href="Gallery.html" class="nav-link active">Gallery</a>
+            <a href="enquiry.html" class="nav-link">enquiry</a>
         </nav>
     </header>
 
@@ -36,7 +37,75 @@
 
     <!-- Footer Section -->
     <footer id="footer" class="footer" style="text-align: center;">
-        <p>&copy;2025 RAMACOL Reproductive Health Center. All Rights Reserved</p>
+        <p>&copy;<span id="current year"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
     </footer>
+
+    <!-- Internal JavaScript -->
+    <script>
+        //Get the current year and insert it to span
+        document.getElementById("current year").textContent = new Date().getFullYear();
+        // Auto-highlight active navigation link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Header color change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = '#002a5c';
+            } else {
+                header.style.backgroundColor = '#004080';
+            }
+        });
+
+        // Create fullscreen viewer
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const fullscreenContainer = document.createElement('div');
+        fullscreenContainer.id = 'fullscreen-view';
+        fullscreenContainer.style.display = 'none';
+        fullscreenContainer.style.position = 'fixed';
+        fullscreenContainer.style.top = '0';
+        fullscreenContainer.style.left = '0';
+        fullscreenContainer.style.width = '100%';
+        fullscreenContainer.style.height = '100%';
+        fullscreenContainer.style.backgroundColor = 'rgba(0,0,0,0.9)';
+        fullscreenContainer.style.justifyContent = 'center';
+        fullscreenContainer.style.alignItems = 'center';
+        fullscreenContainer.style.zIndex = '9999';
+        fullscreenContainer.style.cursor = 'zoom-out';
+
+        const fullscreenImage = document.createElement('img');
+        fullscreenImage.style.maxWidth = '90%';
+        fullscreenImage.style.maxHeight = '90%';
+        fullscreenImage.style.borderRadius = '10px';
+        fullscreenImage.style.boxShadow = '0 0 20px rgba(255,255,255,0.5)';
+        fullscreenContainer.appendChild(fullscreenImage);
+        document.body.appendChild(fullscreenContainer);
+
+        // Show image in fullscreen when clicked
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                fullscreenImage.src = item.src;
+                fullscreenContainer.style.display = 'flex';
+            });
+        });
+
+        // Close fullscreen on click or ESC key
+        fullscreenContainer.addEventListener('click', () => {
+            fullscreenContainer.style.display = 'none';
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                fullscreenContainer.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>

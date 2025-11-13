@@ -17,6 +17,7 @@
             <a href="Our service.html" class="nav-link">Our Services</a>
             <a href="Contact.html" class="nav-link">Contact Us</a>
             <a href="Gallery.html" class="nav-link">Gallery</a>
+            <a href="enquiry.html" class="nav-link">enquiry</a>
         </nav>
     </header>
 
@@ -37,7 +38,11 @@
 
     <!-- Footer Section -->
     <footer id="footer" style="text-align: center;">
-        <p>&copy;2025 RAMACOL Reproductive Health Center. All Rights Reserved</p>
+        <p>&copy;<span id="current year"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
     </footer>
+    <script>
+        //Get the current year and insert it to span
+        document.getElementById("current year").textContent = new Date().getFullYear();
+        </script>
 </body>
 </html>

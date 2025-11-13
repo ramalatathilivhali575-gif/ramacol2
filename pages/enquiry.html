@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enquiry Form - RAMACOL</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header id="header" class="header">
+    <h1>ENQUIRY FORM</h1>
+    <nav id="navbar" class="navbar">
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="About us.html" class="nav-link">About Us</a>
+      <a href="Our service.html" class="nav-link">Our Services</a>
+      <a href="Contact.html" class="nav-link">Contact Us</a>
+      <a href="Gallery.html" class="nav-link">Gallery</a>
+      <a href="enquiry.html" class="nav-link">enquiry</a>
+    </nav>
+  </header>
+
+  <!-- Enquiry Form Section -->
+  <main style="padding: 20px; max-width: 600px; margin: auto;">
+    <section id="enquiry-section">
+      <h2 style="text-align:center;">Send Us an Enquiry</h2>
+
+      <form id="enquiryForm" style="display:flex; flex-direction:column; gap:15px;">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter your email address">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" placeholder="What is your enquiry about?">
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" placeholder="Type your message here..." ></textarea>
+
+        <button type="submit" id="submitBtn" style="background:#004080; color:white; padding:10px; border:none; border-radius:5px; cursor:pointer;">Submit Enquiry</button>
+      </form>
+
+      <p id="responseMessage" style="text-align:center; margin-top:15px; font-weight:bold;"></p>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer" style="text-align: center;">
+    <p>&copy;<span id="current year"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
+  </footer>
+
+  <!-- Internal JavaScript -->
+  <script>
+  
+        //Get the current year and insert it to span
+        document.getElementById("current year").textContent = new Date().getFullYear();
+    // Form submission handling
+    const enquiryForm = document.getElementById('enquiryForm');
+    const responseMessage = document.getElementById('responseMessage');
+
+    enquiryForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent page reload
+
+      // Get input values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Validate inputs
+      if (!name || !email || !phone || !message) {
+        responseMessage.style.color = "red";
+        responseMessage.textContent = "⚠️ Please fill in all required fields.";
+        return;
+      }
+
+      // Validate email format
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        responseMessage.style.color = "red";
+        responseMessage.textContent = "⚠️ Please enter a valid email address.";
+        return;
+      }
+
+      // Simulate form submission (you could replace this with a real backend call)
+      responseMessage.style.color = "green";
+      responseMessage.textContent = "✅ Thank you, " + name + "! Your enquiry has been received.";
+      
+      // Clear form fields after submission
+      enquiryForm.reset();
+    });
+
+    // Highlight active navbar link
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      if (link.href === window.location.href) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
