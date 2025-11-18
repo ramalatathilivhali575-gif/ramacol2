@@ -1,56 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Womens Health Treatment">
-    <meta name="keywords" content="women health, family planning,hiv testing">
-    <meta name="author" content="your name">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Womens Health Treatment">
+<meta name="keywords" content="women health, family planning,hiv testing">
+<meta name="author" content="your name">
 
-    <!--SEO-Friendly Title-->
-    <title>Best Womens Health Reproductive</title>
+<title>Our Services - RAMACOL</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <title>Our Services - RAMACOL</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4./css/all.min.css">
+<style>
+    body { font-family: Arial, Helvetica, sans-serif; background: #f7f9fb; margin:0; color:#222; }
+    header { background: #006699; color: #fff; padding: 20px; text-align:center; }
+    nav { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-link { color: #fff; text-decoration: none; padding: 6px 12px; }
+    main { max-width: 1000px; margin: 20px auto; padding: 0 18px; }
+    .section-title { font-size: 24px; margin-bottom: 20px; text-align:center; }
+
+    /* Accordion styles */
+    .accordion { background-color: #fff; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .accordion-header { cursor: pointer; padding: 15px 20px; font-weight: 600; position: relative; }
+    .accordion-header::after { content: '\f078'; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; right: 20px; transition: transform 0.3s; }
+    .accordion-header.active::after { transform: rotate(180deg); }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; padding: 0 20px; background: #f1f1f1; border-top: 1px solid #ccc; }
+    .accordion-content p { margin: 10px 0; }
+    
+    footer { text-align: center; background: #333; color: #fff; padding: 15px; margin-top: 30px; }
+</style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="main-header">
-        <h1 id="header-title">Our Services</h1>
-        <nav id="navbar">
-            <a href="../index.html" class="nav-link">Home</a>
-            <a href="About us.html" class="nav-link">About</a>
-            <a href="Our service.html" class="nav-link">Our Services</a>
-            <a href="Contact.html" class="nav-link">Contact Us</a>
-            <a href="Gallery.html" class="nav-link">Gallery</a>
-            <a href="enquiry.html" class="nav-link">enquiry</a>
-        </nav>
-        
-    </header>
+<header id="main-header">
+    <h1 id="header-title">Our Services</h1>
+    <nav id="navbar">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="About us.html" class="nav-link">About</a>
+        <a href="Our service.html" class="nav-link active">Our Services</a>
+        <a href="Contact.html" class="nav-link">Contact Us</a>
+        <a href="Gallery.html" class="nav-link">Gallery</a>
+        <a href="enquiry.html" class="nav-link">Enquiry</a>
+    </nav>
+</header>
 
-    <!-- Main Content Section -->
-    <main id="main-content">
-        <section id="services-section">
-            <h2 class="section-title">Women's Reproductive Health Services</h2>
-            <ul class="services-list">
-                <li class="service-item">Family planning and contraception</li>
-                <li class="service-item">Pregnancy testing and prenatal care</li>
-                <li class="service-item">STI testing and treatment</li>
-                <li class="service-item">Menstrual health support</li>
-                <li class="service-item">Menopause support</li>
-                <li class="service-item">Sexual health support</li>
-            </ul>
-        </section>
-    </main>
+<main id="main-content">
+    <section id="services-section">
+        <h2 class="section-title">Women's Reproductive Health Services</h2>
 
-    <!-- Footer Section -->
-    <footer id="footer" style="text-align: center;">
-        <p>&copy;<span id="current year"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
-    </footer>
-    <script>
-        //Get the current year and insert it to span
-        document.getElementById("current year").textContent = new Date().getFullYear();
-        </script>
+        <div class="accordion">
+            <div class="accordion-header">Family planning and contraception</div>
+            <div class="accordion-content">
+                <p>We provide counseling and various options for birth control methods to suit individual needs.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">Pregnancy testing and prenatal care</div>
+            <div class="accordion-content">
+                <p>Early detection of pregnancy and ongoing prenatal support to ensure a healthy pregnancy.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">STI testing and treatment</div>
+            <div class="accordion-content">
+                <p>Confidential testing and treatment for sexually transmitted infections with professional care.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">Menstrual health support</div>
+            <div class="accordion-content">
+                <p>Support for menstrual disorders, irregularities, and education about menstrual hygiene.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">Menopause support</div>
+            <div class="accordion-content">
+                <p>Guidance and treatment for symptoms and health changes during menopause.</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="accordion-header">Sexual health support</div>
+            <div class="accordion-content">
+                <p>Information, counseling, and support for a healthy and safe sexual life.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer id="footer">
+    <p>&copy;<span id="currentYear"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
+</footer>
+
+<script>
+    // Set current year
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+    // Accordion functionality
+    const accHeaders = document.querySelectorAll('.accordion-header');
+    accHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const currentlyActive = document.querySelector('.accordion-header.active');
+            if(currentlyActive && currentlyActive !== header){
+                currentlyActive.classList.remove('active');
+                currentlyActive.nextElementSibling.style.maxHeight = 0;
+            }
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            if(header.classList.contains('active')){
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = 0;
+            }
+        });
+    });
+</script>
 </body>
 </html>

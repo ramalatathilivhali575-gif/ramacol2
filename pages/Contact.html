@@ -7,15 +7,17 @@
     <meta name="keywords" content="women health, family planning,hiv testing">
     <meta name="author" content="your name">
 
-    <!--SEO-Friendly Title-->
-    <title>Best Womens Health Reproductive</title>
-
     <title>Contact Us - RAMACOL</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .form-label { font-weight: 600; }
+        .form-input { padding: 10px; border-radius: 6px; border: 1px solid #ccc; width: 100%; margin-bottom: 10px; }
+        .submit-btn { background: #006699; color: white; padding: 12px; border: none; border-radius: 6px; cursor: pointer; }
+        #formMessage { font-weight: 600; margin-top: 10px; }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header id="contact-header" class="header">
         <h1 id="header-title">Contact RAMACOL</h1>
         <nav id="navbar" class="navbar">
@@ -24,12 +26,10 @@
             <a href="Our service.html" class="nav-link">Our Services</a>
             <a href="Contact.html" class="nav-link active">Contact Us</a>
             <a href="Gallery.html" class="nav-link">Gallery</a>
-            <a href="enquiry.html" class="nav-link">enquiry</a>
+            <a href="enquiry.html" class="nav-link">Enquiry</a>
         </nav>
-        
     </header>
 
-    <!-- Main Content Section -->
     <main id="main-content">
         <!-- Contact Information Section -->
         <section id="contact-info">
@@ -47,6 +47,9 @@
 
                 <label for="LastName" class="form-label">Last Name</label>
                 <input name="LastName" type="text" id="LastName" class="form-input">
+
+                <label for="Email" class="form-label">Email Address</label>
+                <input name="Email" type="email" id="Email" class="form-input">
 
                 <label for="contact" class="form-label">Contact Number</label>
                 <input name="contact" type="text" id="contact" class="form-input">
@@ -79,37 +82,43 @@
         </section>
     </main>
 
-    <!-- Footer Section -->
     <footer id="footer" class="footer">
-        <p>&copy;<span id="current year"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
+        <p>&copy;<span id="currentYear"></span> RAMACOL Reproductive Health Center. All Rights Reserved</p>
     </footer>
 
-    <!-- ✅ Internal JavaScript Section -->
     <script>
-    
-        //Get the current year and insert it to span
-        document.getElementById("current year").textContent = new Date().getFullYear();
-        
+        // Set current year
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+
         document.getElementById("contactForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Stop form from reloading page
 
             const firstName = document.getElementById("FirstName").value.trim();
             const lastName = document.getElementById("LastName").value.trim();
+            const email = document.getElementById("Email").value.trim();
             const contact = document.getElementById("contact").value.trim();
             const message = document.getElementById("formMessage");
 
             // Basic validation
-            if (firstName === "" || lastName === "" || contact === "") {
+            if (firstName === "" || lastName === "" || email === "" || contact === "") {
                 message.style.color = "red";
                 message.textContent = "⚠️ Please fill out all fields.";
                 return;
             }
 
-            // Simulate form submission success
-            message.style.color = "green";
-            message.textContent = `✅ Thank you, ${firstName}! We’ll get in touch soon.`;
+            // Email format validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                message.style.color = "red";
+                message.textContent = " enter a valid email address.";
+                return;
+            }
 
-            // Optional: Clear form fields after submission
+            // Success message
+            message.style.color = "green";
+            message.textContent = `✅ Thank you, ${firstName}! Your form has been received.`;
+
+            // Clear form fields
             document.getElementById("contactForm").reset();
         });
     </script>
