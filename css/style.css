@@ -595,7 +595,7 @@ body {
 }
 
 .form-input {
-    width: 100%;
+    width: 40%;
     padding: 12px;
     margin-bottom: 18px;
     border: 1px solid #ccc;
@@ -611,7 +611,7 @@ body {
 
 /* Submit Button */
 .submit-btn {
-    width: 100%;
+    width: 20%;
     padding: 12px;
     background-color: #007bff;
     color: white;
